@@ -59,7 +59,8 @@ public class Palavra implements Comparable<Palavra>
         if (this.getClass() != obj.getClass()) return false;
 
         Palavra p = (Palavra)obj;
-        if (this.texto != p.texto) return false;
+        if (!this.texto.equals(p.texto)) return false; 
+        //if (this.texto != p.texto) return false; // comparar com equals Como???   
         
         return true;
     }

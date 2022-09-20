@@ -32,7 +32,7 @@ public class Forca
 			catch (Exception erro)
 			{}
 
-			while (tracinhos.isAindaComTracinhos() &&
+		 	while (tracinhos.isAindaComTracinhos() &&
 				  !controladorDeErros.isAtingidoMaximoDeErros())
 			{
 				System.out.println ("Palavra...: "+tracinhos);

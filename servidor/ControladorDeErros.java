@@ -1,7 +1,7 @@
 package servidor;
 public class ControladorDeErros implements Cloneable
 {
-    private int qtdMax, qtdErr = 0;
+    private Integer qtdMax, qtdErr = 0;
 
     
     public ControladorDeErros (int qtdMax) throws Exception
@@ -32,6 +32,16 @@ public class ControladorDeErros implements Cloneable
 
     public boolean equals(Object obj)
     {
+        if (this == obj) return true;
+        if (obj == null) return false;
+
+        if (this.getClass() != obj.getClass()) return false;
+        
+        ControladorDeErros c = (ControladorDeErros)obj;
+        // if (this.qtdMax != c.qtdMax) return true; MÉTODO ORIGINAL
+        if (!this.qtdMax.equals(c.qtdMax)) return false; // MÉTODO EQUALS 
+        if (!this.qtdErr.equals(c.qtdErr)) return false;
+        
         return true;
     }
 

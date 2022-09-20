@@ -42,7 +42,12 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         if (this == obj) return true; 
         if (obj == null) return false; 
 
-        return false; 
+        if (this.getClass() != obj.getClass()) return false;
+
+        ControladorDeLetrasJaDigitadas c = (ControladorDeLetrasJaDigitadas) obj;
+        if (!this.letrasJaDigitadas.equals(c.letrasJaDigitadas)) return false;
+        
+        return true; 
     }
 
     public int hashCode ()

@@ -8,6 +8,7 @@ public class TestePalavra {
             String texto = "elefante";
             Palavra palavra = new Palavra(texto);
             
+            
             // testando getQuantidade
             System.out.println("\nVezes que a letra 'e' aparece: " + palavra.getQuantidade('e'));
 
@@ -16,7 +17,8 @@ public class TestePalavra {
                                 palavra.getPosicaoDaIezimaOcorrencia(2, 'e')); // String (aspas duplas) enquanto char (aspas simples) 
 
             // testando método equals
-            if (palavra.equals(new Palavra("elefante"))) {
+            var a = new Palavra("elefante");
+            if (palavra.equals(a)) {
                 System.out.println("\nObject e palavra são iguais!");
             }
             else {
@@ -24,7 +26,7 @@ public class TestePalavra {
             }
 
             // testando método hashCode
-            System.out.println("\nhashCode de Palavra: " + palavra.hashCode());
+            System.out.println("\nhashCode de Palavra: " + palavra.hashCode()+" "+ a.hashCode());
 
         }
         catch (Exception e) {

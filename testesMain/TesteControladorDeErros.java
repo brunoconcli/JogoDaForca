@@ -1,7 +1,5 @@
 package testesMain;
 
-import java.util.ResourceBundle.Control;
-
 import servidor.ControladorDeErros;
 
 public class TesteControladorDeErros {
@@ -21,7 +19,7 @@ public class TesteControladorDeErros {
 
             // testando hashCode()
             System.out.println("Amostra do hashCode: " + controladorDeErros.hashCode());
-            
+
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }

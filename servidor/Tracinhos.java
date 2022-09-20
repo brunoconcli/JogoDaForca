@@ -55,7 +55,7 @@ public class Tracinhos implements Cloneable
         if (this.getClass() != obj.getClass()) return false;
 
         Tracinhos t = (Tracinhos)obj;
-        if (this.texto.length != t.texto.length) return false;
+        if (this.texto.equals(t.texto)) return false;
         
         return true;
         
@@ -64,7 +64,7 @@ public class Tracinhos implements Cloneable
     public int hashCode ()
     {
         int hash = 2;
-        hash = 2 * 3 + new String (this.texto).hashCode();
+        hash = 2 * 3 + (this.texto).hashCode();
         if(hash < 0) hash = - hash; 
         return hash;
     }
